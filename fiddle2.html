@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fiddle</title>
+    <style>
+      body {
+        background: white;
+      }
+      .page {
+        background: linear-gradient(to top, rgb(251, 194, 235) 0%, rgb(166, 193, 238) 100%);
+        border: solid;
+        padding: 70px 90px;
+        margin: 30px 250px 30px;
+        box-shadow: 10px 10px 15px #d3d6db;
+        border-radius: 25px;
+      }
+      h1 {
+        font-weight: bold;
+        text-align: center;
+        font-size: 44px;
+      }
+      h2 {
+        text-align: center;
+        font-size: 24px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        transition: opacity 150ms ease-in-out;
+        border-radius: 10px;
+      }
+      img:hover {
+        transform:scale(1.1);
+      }
+      hr {
+        box-shadow: 10px 5px 5px #8cbeaa;
+      }
+      p {
+        text-align: center;
+        background: linear-gradient(#8cbeaa);
+        line-height: 1.5;
+      }
+      button:hover {
+        color: #f0f2eb;
+        background-color:purple;
+      }
+    </style>
+    <body>
+      <div class="page">
+        <h1>All about Fiddle</h1>
+        <h2><em>and why it's different from violin</em></h2>
+        <div style="text-align: center">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/117/227/original/download.jpg?1709339865"
+          />
+          <hr />
+          <p>
+            Fiddles and violins <span><strong>are the same instrument</strong></span> but the
+            difference in the term refers to the type of music played on each.
+            Violin is usually assocaited with a classical and jazz styles of
+            playing whereas a fiddle is generally the word used for bluegrass,
+            celtic and old time music to name a few genres. To summarize, the
+            instruments are the same but the type of music and the manner in
+            which they are played are different. <br></br><br />Learn more
+            <a
+              href="https://www.johnsonstring.com/violins-facts/fiddle-vs-violin.htm"
+              target="_blank"
+            >
+              about fiddle vs. violin.
+            </a>
+          </p>
+          <br></br>
+          <button>Get in touch</button>
+          <br></br><br></br>
+          <footer>This page was built by Liz Reynolds</footer>
+        </div>
+      </div>
+      <script>
+        function contactUs() {
+          let interest = prompt("Would you like to learn more about Fiddle?");
+          let name = prompt("What is your name?");
+          let email = prompt("What is your email address?");
+          if (interest === "yes" || interest === "Yes" || interest === "yeah") {
+            alert("Thank you, " + name + ". We will be in touch!");
+          } else {
+            alert("Have a good day!");
+          }
+        }
+        let contactButton = document.querySelector("button");
+        contactButton.addEventListener("click", contactUs);
+      </script>
+    </body>
+  </head>
+</html>
